@@ -18,7 +18,8 @@ module Capistrano
 
     def send(action)
       payload = @message.payload_for(action)
-      binding.pry
+      puts payload
+      puts payload.inspect
       send_to_telegram(payload)
     end
 
